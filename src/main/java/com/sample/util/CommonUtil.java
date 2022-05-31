@@ -12,13 +12,13 @@ public class CommonUtil {
     @Autowired
     RestUtil restUtil;
 
-    public User getIPDetails(final String API) {
+    public User getUserDetails(final String API) {
         int retry = 0;
         User data = null;
         while (retry < MAX_RETRIES){
             try {
                 // CHECK API NAME AND CALL THE RELEVANT METHOD
-                data = restUtil.getIpDetails();
+                data = restUtil.getUserDetails();
                 System.out.println(data);
                 break;
             }
