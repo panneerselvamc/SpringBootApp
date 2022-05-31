@@ -20,8 +20,8 @@ public class UserController {
     UserMapper userMapper;
 
     @GetMapping
-    public UserDTO getIPDetails(){
-       UserVO vo = userService.getIpDetails();
+    public UserDTO getUserDetails(){
+       UserVO vo = userService.getUserDetails();
         UserDTO dto = userMapper.toDTO(vo);
        return dto;
     }

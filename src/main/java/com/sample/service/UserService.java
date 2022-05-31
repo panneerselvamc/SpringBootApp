@@ -15,10 +15,9 @@ public class UserService {
 
     @Autowired
     UserMapper userMapper;
-    public UserVO getIpDetails()  {
-        System.out.println("SERVICE LAYER");
-        User ip = commonUtil.getIPDetails("IP_DETAILS");
-        UserVO vo = userMapper.toVO(ip);
+    public UserVO getUserDetails()  {
+        User user = commonUtil.getUserDetails("USER_DETAILS");
+        UserVO vo = userMapper.toVO(user);
         // VO can be used for Further Processing
         // VO can be used for Saving Data in DB
         // VO Can be used for further logics

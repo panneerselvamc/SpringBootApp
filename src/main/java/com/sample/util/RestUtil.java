@@ -16,7 +16,7 @@ public class RestUtil {
     @Autowired
     RestTemplate restTemplate;
 
-    public User getIpDetails(){
+    public User getUserDetails(){
         ResponseEntity<User> response
                 = restTemplate.getForEntity(GET_USER, User.class);
         return response.getBody();
